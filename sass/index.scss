@@ -1,0 +1,599 @@
+@import './base_scss/root';
+@import './base_scss/mixin';
+
+* {
+    // border: 1px solid red;
+}
+
+
+body{
+    font-family: 'Kalam', 'Noto Serif TC', serif;
+    position: relative;
+    background: $mainWhite;
+}
+
+
+
+/* 上方橫條 */
+.my_top_icons{
+     background: $mainGreen;
+    .top-icons{
+       a{
+           color: $mainWhite; 
+           font-size: $fs_25;
+           transition: color 1s ease;
+       }
+       a:hover{
+           color: $lightDark;
+       }
+    }
+    h5{
+        color: $lightDark;
+    }
+}
+
+/* header */
+header{
+    /* navbar */
+    .navbar{
+        background: $lightDark;
+        padding: 10px 20px !important;
+        // transition: padding 2s ease;
+        .navbar-brand{
+            color: $mainGreen;
+            border: 3px solid $mainGreen;
+            font-size: 30px;
+            transition: all 2s;
+        }
+        .navbar-brand:hover{
+            background: $mainGreen;
+            color: $lightDark;
+        }
+
+        .navbar-toggler{
+            border: 3px solid $mainGreen;
+            padding: 3px;
+            .bar1, .bar2, .bar3{
+                @include setBox(25px, 3px);
+                background: $mainGreen;
+                margin: 5px;
+                transition: all 0.5s ease;
+            }
+            
+        }
+        // toggler 動畫
+        .change{
+            .bar1{
+                transform: rotate(-45deg) translate(-5px,6px);
+            }
+            .bar2{
+                opacity: 0;
+            }
+            .bar3{
+                transform: rotate(45deg)  translate(-5px,-6px);
+            }
+        }
+
+        #myNavbar{
+            .nav-item{
+                .nav-link{
+                    color: $mainWhite;
+                    font-size: $fs_25;
+                    border-radius: 5px;
+                    padding: 10px 20px;
+                    transition: background 2s ease;
+
+                }
+                .nav-link:hover{
+                    background: $mainGreen;
+                    color: $mainWhite;
+                }
+
+                .nav-active{
+                    background: $bg_NavItem;
+                }
+
+                
+            }
+
+            .search-btn{
+                background: $mainGreen;
+                transition: all 1s ease;
+            }
+            .search-btn:hover{
+                @include setBtn_Hover(#191919,$mainGreen)
+            }
+        }
+    }
+
+    // carousel
+    #myCarousel{
+        .no-padding {
+            padding: 0;
+          }
+        .item-1{
+            background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)),url('../img/banner-1.jpeg')center/cover fixed no-repeat;
+        }
+        .item-2{
+            background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)),url('../img/banner-2.jpeg')center/cover fixed no-repeat;
+        }
+        .item-3{
+            background: linear-gradient(to right, rgba(42, 145, 52, 0.9), rgba(42, 145, 52, 0.5)),url('../img/banner-3.jpeg')center/cover fixed no-repeat;
+        }
+        .item-1,.item-2,.item-3{
+            min-height: 60vh;
+            clip-path: polygon(0 0,100% 0, 100% 85%, 0 95%);
+            .banner-btn{
+                color: $mainWhite;
+                text-decoration: none;
+                border: 2px solid $mainWhite;
+                box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+                transition: all 1s ;
+            }
+            .banner-btn:hover{
+                transform: translateY(-7px);
+                @include setBtn_Hover($bg:$mainWhite, $c:$mainGreen);
+                box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+                text-decoration: none;
+                border-color: $mainWhite;
+
+            }
+        }
+
+    }
+    
+}
+
+
+/* skills */
+#skills{
+    .skills-icon{
+        background: $lightDark;
+        clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%);
+        transition: all 1s ease;
+        span{
+            font-size: 6rem;
+            color: #909090;
+            transition: all 1s ease-in-out;
+        }
+    }
+    .skills-icon:hover{
+        background: $mainGreen;
+        span{
+            color: $mainWhite;
+        }
+    }
+    .skills-text{
+        transition: all 1s ease;
+        
+        h3{
+            transition: color 1s ease-in-out;
+            
+        }
+        p{
+            
+            transition: color 2s ease-in-out;
+        }
+        
+    }
+    .skills-text:hover{
+        
+        h3{
+            color: $mainGreen;
+        }
+        p{
+            color: #90B44B !important;
+        }
+    }
+}
+
+/* about */
+#about{
+    background: #909090;
+    min-height: 40vh;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+    article#modal-filler{
+        background: linear-gradient(rgba(42, 145, 52, 0.5), rgba(42, 145, 52, 0.5)), url('../img/video-filler.jpeg')center/cover fixed no-repeat;
+        min-height: 50vh;
+        a{
+            color: $lightDark;
+            font-size: 80px;
+            @include btnScalaAni();
+        }
+    }
+    .title{
+        a{
+            background: #909090;
+        }
+    }
+    .about-progress{
+        min-height: 50vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/video-filler.jpeg')center/cover fixed no-repeat;
+        outline: 5px solid $lightGreen;
+        outline-offset: 10px;
+
+        .progress-bars-parts{
+            .progress-bar{
+                background: $mainGreen;
+            }
+        }
+    }
+
+    
+    
+}
+
+/* projects*/
+#projects{
+    .filter-button-group{
+        button{
+            background: $mainGreen;
+            color: $mainWhite;
+            transition: all 1s ease-in-out;
+        }
+        button:hover{
+            background: $lightDark;
+        }
+    }
+    .img-container{
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(rgba(181, 181, 14, 0.9), rgba(181, 181, 14, 0.9));;
+        .project-image{
+            transition: all 2s ease-in-out;
+            opacity: 1;
+        }
+        .search-link{
+            position: absolute;
+            @include setCenter();
+            font-size: 4rem;
+            color: $mainGreen;
+            margin-top: -50%;
+            opacity: 0;
+            transition: margin 2s ease-in-out, color 0.5s ease-in-out, opacity 0.75s ease-in-out;
+        }
+        
+    }
+
+    .img-container:hover{
+        .project-image{
+            opacity: 0.3;
+            transform: scale(1.3);
+        }
+        .search-link{
+            
+            margin-top: 0;
+            opacity: 1;
+        }
+        .search-link:hover{
+            color: $lightDark;
+        }
+        
+    } 
+}
+
+/* current-project */
+#current-project{
+    background: #909090;
+    clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 95%);
+
+    .current-project-photos{
+        min-height: 50vh;
+        position: relative;
+        .current-project-photo{
+            width: 50%;
+            height: 60%;
+            position: absolute;
+            transition: all 2s ease-in-out;
+        }
+        .current-project-photo:hover{
+            transform: scale(1.1);
+            z-index: 50;
+        }
+    }
+    
+
+    .current-project-photo-1{
+        top: 0;
+        left: 10%;
+        transform: rotate(-15deg);
+        z-index: 20;
+    }
+    .current-project-photo-2{
+        top: 0;
+        left: 46%;
+        transform: rotate(8deg);
+        z-index: 30;
+    }
+    .current-project-photo-3{
+        top: 40%;
+        left: 3%;
+        transform: rotate(-5deg);
+        
+    }
+    .current-project-photo-4{
+        top: 41%;
+        left: 40%;
+        transform: rotate(38deg);
+    }
+}
+
+/* posts */
+#posts{
+    .card{
+        background: transparent;
+        border: none;
+        position: relative;
+        .corner-text{
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: $lightGreen;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+        }
+        .card-img-top{
+            border-radius: 0!important;
+        }
+        .card-footer{
+            background: transparent;
+            .post-link{
+                color: $mainGreen;
+                text-decoration: none;
+            }
+            .post-link:hover{
+                color: #dd0000;
+            }
+        }
+    }
+    .card:hover{
+        .corner-text{
+            opacity: 1;
+        }
+    }
+}
+
+/* contact */
+#contact{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/banner-2.jpeg')center/cover fixed no-repeat;
+    clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);
+    color: $mainGreen;
+    .height-30 {
+        min-height: 30vh;
+        .form-control{
+            background: transparent;
+            border: none; //去外框
+            border-bottom: 2px solid $mainWhite;
+            border-radius: 0;
+            color: $mainWhite;
+            
+        }
+        .form-control::placeholder{
+            text-transform: capitalize;
+            font-size: 1.1rem;
+            color: $mainWhite;
+        }
+        .form{
+            button{
+                background: transparent;
+                color: $mainWhite;
+                border: 2px solid $mainWhite;
+                border-radius: 0;
+                transition: all 2s ease;
+            }
+            button:hover{
+                background: $mainWhite;
+                color: $mainGreen;
+                border-color: $mainGreen;
+                
+            }
+        }
+        
+    }
+
+}
+
+
+/*values*/
+#values{
+    .value{
+         position: relative;
+        .value-icon{
+            font-size: 3.2rem;
+            color: $mainWhite;
+            background: $lightDark;
+            padding: 25px 35px;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            transition: all 2s ease;
+        }
+        .value-number{
+            background: $mainGreen;
+            padding: 15px;
+            position: absolute;
+            border-radius: 50%;
+            font-size: 20px;
+            color: $lightDark;
+            top: -10%;
+            left: 58%;
+            display: inline-block;
+            transition: all 2s ease;
+        }
+        h1{
+            margin-top: 1rem !important;
+        }
+    }
+    .value:hover{
+        .value-icon{
+            background: $mainGreen;
+            transform: scale(1.2);
+        }
+        .value-number{
+            background: $lightDark;
+            transform: scale(0.9);
+            color: $mainWhite;
+        }
+    }
+   
+}
+
+/*reviews*/
+#reviews{
+    background: linear-gradient(rgba(42, 145, 52, 0.7), rgba(42, 145, 52, 0.7)), url('../img/banner-1.jpeg');
+    color: $mainWhite;
+    .carousel-inner{
+        img{
+            width: 150px;
+        }
+        .customer-text{
+            h3{
+                color: $lightDark;
+            }
+            h4{
+                color: $lightGrey;
+            }
+            p{
+                line-height: 1.5;
+                span{
+                    font-size: 2rem;
+                    color: #cbcb00;
+                }
+            }
+            .ratings{
+                color: #cbcb00;
+            }
+        }
+    }
+}
+
+/*team*/
+#team{
+    .member-container{
+        position: relative;
+        background: $mainGreen;
+        overflow: hidden;
+        .team-image{
+            transition: all 2s ease-in-out;
+        }
+        .member-info{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 10px;
+            background: $mainGreen;
+            color: $lightDark;
+            margin-bottom: -140px;
+            width: 100%;
+            transition: all 2s ease-in-out;
+            backface-visibility: hidden;
+            .member-text{
+                .team-icons{
+                    a{
+                        color: $mainWhite;
+                        font-size: 1.5rem;
+                        transition: color 1.5s ease;
+                    }
+                    a:hover{
+                        color: $lightDark;
+                    }
+                }
+
+
+            }
+            .member-icon{
+                a{
+                    font-size: 4rem;
+                    color: $mainWhite;
+                    transition: all 2s ease;
+            
+                }
+                a:hover{
+                    text-decoration: none;
+                    color: $lightDark;
+                }
+            }
+        }
+    }
+    .member-container:hover{
+        .team-image{
+            transform: translateY(-72px);
+            opacity: 0.5;
+        }
+        .member-info{
+            margin-bottom: 0;
+        }
+    }
+}
+/*number*/
+#numbers{
+    .number{
+        background: $mainGreen;
+        color: $lightDark;
+        transition: all 2s ease-in-out;
+    }
+    .number:hover{
+        background: $lightDark;
+        color: $mainGreen;
+    }
+}
+
+/*contact*/
+#contact_form{
+    background: linear-gradient(rgba(42, 145, 52, 0.3), rgba(42, 145, 52, 0.3)), url("../img/banner-1.jpeg")center/cover fixed no-repeat;
+    .height-80{
+        min-height: 80vh;
+    }
+    .card{
+        background: rgba(0, 0, 0, 0.5);
+        transition: all 2s ease;
+        .card-header{
+            color: $mainWhite;
+        }
+        .card-body{
+             .input-group-text{
+                background: $mainGreen;
+                border-color: $mainGreen;
+                color: $lightDark;
+            }
+            input{
+                color: #606060;
+            }
+            input::placeholder{
+                color: #606060;
+            }
+            .contact-btn{
+                color: $mainWhite;
+                background: $mainGreen;
+                transition: all 2s ease-in-out;
+            }
+            .contact-btn:hover {
+                background: transparent;
+                border-color: $mainGreen;
+                color: #2a9134;
+            }
+        }
+
+    }
+    .card:hover{
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
+/*footer*/
+footer{
+    background: $lightDark;
+    .footer-icons{
+        a{
+            color: $mainGreen;
+            font-size: 1.5rem;
+            transition: color 1s ease;
+        }
+        a:hover{
+            color: $mainWhite;
+        }
+        
+    }
+    h5{
+        color: $mainWhite;
+    }
+}

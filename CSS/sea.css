@@ -1,0 +1,315 @@
+.this {
+    border: 1px solid red;
+}
+
+:root {
+    --main-GreenColor: #2a9134;
+    --main-LightGreenColor: #90b44b;
+    --main-WhiteColor: #f1fffa;
+    --main-LightDarkColor: #242424;
+    --main-YellowColor: rgb(249, 228, 148);
+    --main-PinkColor: #ef7998;
+    --main-BlackColor: #071013;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+
+/* 共同設計 */
+
+.nav-item {
+    width: 90px;
+}
+
+.banner-title {
+    color: #fb7900ea;
+    font-size: 3.5rem;
+}
+
+.btn-pink {
+    color: var(--main-PinkColor);
+    border-color: var(--main-PinkColor);
+}
+
+.btn-Black {
+    color: var(--main-BlackColor);
+    border-color: var(--main-BlackColor);
+    border-radius: 15px;
+}
+
+.btn-Black:hover {
+    color: #fb7900ea;
+    background: var(--main-BlackColor);
+}
+
+.btn-pink:hover {
+    color: var(--main-BlackColor);
+    background: var(--main-PinkColor);
+}
+
+.btn-Green {
+    color: var(--main-LightGreenColor);
+    background: var(--main-GreenColor);
+    border: 2px solid var(--main-GreenColor);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 1s;
+}
+
+
+/* gif */
+
+
+/* 
+.gif {
+    width: 100px;
+    height: 90px;
+} */
+
+
+/* header toggler */
+
+header {
+    height: 90px;
+}
+
+header .navbar {
+    padding: 10px 20px !important;
+    z-index: 9999;
+    background: var(--main-LightDarkColor);
+}
+
+header .navbar .navbar-toggler {
+    border: 3px solid var(--main-GreenColor);
+    padding: 3px;
+}
+
+header .navbar .navbar-toggler div {
+    width: 25px;
+    height: 3px;
+    background: var(--main-GreenColor);
+    margin: 5px;
+    transition: all 0.5s ease;
+    /*transform*/
+}
+
+header .navbar-nav .navbar-toggler .navbar-collapse .nav-link {
+    font-size: 40px;
+}
+
+
+/* header toggler 動畫 */
+
+header .navbar .navbar-toggler .change.bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+header .navbar .navbar-toggler .change.bar2 {
+    opacity: 0;
+}
+
+header .navbar .navbar-toggler .change.bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/*  */
+
+header .navbar #myNavbar .navbar-nav .nav-item {
+    padding: 0px 5px;
+}
+
+header .navbar #myNavbar .navbar-nav .nav-item .nav-link {
+    color: var(--main-WhiteColor);
+    border-radius: 10px;
+    padding: 0px;
+    font-size: 27px;
+}
+
+section#about .about-img_container {
+    position: relative;
+    cursor: pointer;
+}
+
+header .navbar .navbar-brand {
+    font-size: 27px;
+    z-index: 999;
+}
+
+section#about .about-img_container:before {
+    content: "";
+    position: absolute;
+    top: -1.3rem;
+    left: -1.3rem;
+    width: 100%;
+    height: 100%;
+    outline: 0.5rem solid var(--main-BlackColor);
+    z-index: -1;
+    transition: all 1s linear;
+    /* 做移動動畫 */
+}
+
+section#about .about-img_container:hover:before {
+    top: 0;
+    left: 0;
+}
+
+section#about .about-img_container img {
+    z-index: 0;
+}
+
+
+/* 風景特色 */
+
+h1 {
+    color: #fb7900ea;
+    display: inline;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+h2 {
+    display: inline;
+    font-size: 38px;
+}
+
+p {
+    font-size: 18px;
+}
+
+section#landscape {
+    background: #909090;
+    clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 95%);
+}
+
+section#landscape .landscape-photos {
+    min-height: 50vh;
+    position: relative;
+}
+
+section#landscape .landscape-photos .landscape-photo {
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    transition: all 2s ease-in-out;
+}
+
+section#landscape .landscape-photos .landscape-photo:hover {
+    transform: scale(1.1);
+    z-index: 50;
+}
+
+section#landscape .landscape-photos .landscape-photo-1 {
+    top: 0;
+    left: 10%;
+    transform: rotate(-15deg);
+    z-index: 20;
+}
+
+section#landscape .landscape-photos .landscape-photo-2 {
+    top: 0;
+    left: 46%;
+    transform: rotate(8deg);
+    z-index: 30;
+}
+
+section#landscape .landscape-photos .landscape-photo-3 {
+    top: 40%;
+    left: 3%;
+    transform: rotate(-5deg);
+}
+
+section#landscape .landscape-photos .landscape-photo-4 {
+    top: 41%;
+    left: 40%;
+    transform: rotate(38deg);
+}
+
+
+/* posts card*/
+
+section#posts .card {
+    background: transparent;
+    /* border: none; */
+    position: relative;
+    cursor: pointer;
+}
+
+section#posts .card .corner-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--main-LightGreenColor);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+section#posts .card .card-content {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+section#posts .card:hover .corner-text {
+    opacity: 1;
+}
+
+section#posts .card .card-img-top {
+    height: 200px;
+    /* border-radius: 0!important; */
+}
+
+section#posts .card .card-footer {
+    /* background: transparent; */
+}
+
+section#posts .card .card-footer .post-link {
+    color: var(--main-GreenColor);
+    text-decoration: none;
+}
+
+section#posts .card .card-footer .post-link:hover {
+    color: #dd0000;
+}
+
+
+/* #partners {
+  background: $TransGrey;
+  .carousel-control-prev, .carousel-control-next {
+      font-size: 2.5rem;
+      color: $mainBlack;
+      
+  }
+  .carousel-control-prev{
+      transform: translateX(-200%);
+  }
+  .carousel-control-next{
+      transform: translateX(200%);
+  }
+} */
+
+
+/* 輪播圖 */
+
+section#partners {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+section#partners .carousel-control-prev,
+.carousel-control-next {
+    font-size: 2.5rem;
+    color: var(--main-BlackColor);
+}
+
+section#partners .carousel-control-prev {
+    transform: translateX(-200%);
+}
+
+section#partners .carousel-control-next {
+    transform: translateX(200%);
+}
+
+#footer {
+    background: var(--main-BlackColor);
+}

@@ -1,0 +1,67 @@
+.this {
+  border: 1px solid red;
+}
+
+:root {
+  --main-GreenColor: #2a9134;
+  --main-LightGreenColor: #90b44b;
+  --main-WhiteColor: #f1fffa;
+  --main-LightDarkColor: #242424;
+  --main-YellowColor: rgb(249, 228, 148);
+  --main-PinkColor: #ef7998;
+  --main-BlackColor: #071013;
+}
+
+/*id*/
+#fgu {
+  width: 75px;
+  height: 75px;
+}
+
+#circleContent {
+  width: 500px;
+  height: 500px;
+}
+
+/*class*/
+.body .hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 5px;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 100px;
+}
+
+/* 圖片*/
+header .navber .navber-brand .div .fgu {
+  height: 50;
+  width: 50;
+}
+
+.nav-item a {
+  font-size: 25px;
+  color: #0000;
+  margin-left: 50px;
+  margin-bottom: -100px;
+  flex-grow: 1;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+.nav-item a:hover {
+  border-bottom: 2px solid #404141;
+}
+
+.carousel .carousel-inner img {
+  margin-top: 20px;
+  height: 250px;
+}

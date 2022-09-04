@@ -1,0 +1,34 @@
+@mixin setBox($w,$h){
+    width: $w;
+    height: $h;
+}
+
+@mixin setBtn_Hover($bg,$c){
+    color: $c;
+    background: $bg;
+}
+
+@mixin setCenter(){
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*keyframe 必定要這樣先宣告*/
+@mixin keyframes($animationName) {
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin btnScalaAni(){
+    animation: btnScalaAni 3s ease infinite;
+    @include keyframes(btnScalaAni) {
+
+        50%{
+            transform: scale(1.5);
+            color: $mainWhite;
+        }
+
+    }
+}

@@ -1,0 +1,163 @@
+.this {
+  border: 1px solid red;
+}
+
+:root {
+  --main-GreenColor: #2a9134;
+  --main-LightGreenColor: #90b44b;
+  --main-WhiteColor: #f1fffa;
+  --main-LightDarkColor: #242424;
+  --main-YellowColor: rgb(249, 228, 148);
+  --main-PinkColor: #ef7998;
+  --main-BlackColor: #071013;
+}
+
+/*id*/
+#fgu {
+  width: 75px;
+  height: 75px;
+}
+
+#circleContent {
+  width: 500px;
+  height: 500px;
+}
+
+#round {
+  z-index: 1px;
+  opacity: 1;
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  animation: round 5s infinite;
+  animation-iteration-count: 1;
+  margin-left: 100px;
+}
+
+#anspic img {
+  width: 500px;
+  height: 600px;
+  position: relative;
+  z-index: 2px;
+}
+
+/*class*/
+
+p {
+  writing-mode: vertical-rl;
+  font-family: "";
+}
+
+img {
+  border: #999999;
+  border-style: dotted;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+img :hover {
+  border-bottom: 2px solid #404141;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+hr {
+  border-width: 3px;
+  background-color: #000000;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article .article_left {
+  background-color: #ffffff;
+}
+
+article .article_left .tr .td a {
+  color: #000;
+}
+
+article .center {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  left: 100px;
+  border: none;
+  background-color: #ffffff;
+}
+
+article .article_right {
+  display: inline-block;
+  vertical-align: top;
+  width: 280px;
+  position: relative;
+  left: 280px;
+  top: -580px;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 100px;
+}
+
+/* 圖片*/
+header .navber .navber-brand .div .fgu {
+  height: 50;
+  width: 50;
+}
+
+.nav-item a {
+  font-size: 25px;
+  color: #0000;
+  margin-left: 50px;
+  margin-bottom: -100px;
+  flex-grow: 1;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+.nav-item a:hover {
+  border-bottom: 2px solid #404141;
+}
+
+.carousel .carousel-inner img {
+  margin-top: 20px;
+  height: 250px;
+}
+
+.vrl {
+  writing-mode: vertical-rl;
+}
+
+#round {
+  opacity: 1;
+  position: absolute;
+  z-index: 999999;
+  width: 800px;
+  height: 800px;
+  animation: round 10s;
+  animation-iteration-count: 1;
+  margin-left: 100px;
+  animation-fill-mode: forwards;
+}
+
+@keyframes round {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
