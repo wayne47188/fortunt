@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- common css -->
+  <link rel="stylesheet" href="./css/all.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- project css-->
+  <link rel="stylesheet" href="./css/fortune.css" />
+  <!---js&jquery-->
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  <script src="./js/all.js"></script>
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+TC&amp;display=swap"/>
+
+  <title>數位化籤詩系統</title>
+
+  <style type="text/css">
+    img { border: #999999; border-style: dotted; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+    
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+  </style>
+ 
+  
+    
+</head>
+
+<body style="background-color: burlywood;">
+    <!------------->
+  <header id = naber  >
+  <!----navber -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-yellow ">
+      <div class="container-fluid" style="height: 150;"   >
+        <!-- brand -->
+        <a class="navbar-brand col-5" href="./index.html">
+          <img src="./data/fgu.png" href="./index.html" class="fgu" id="fgu" alt=""></img>
+        </a>
+         <!-- toggler -->
+         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+            <!-- collapse item -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav col-7">
+            <li class="nav-item">
+              <a class="nav-link active  " aria-current="page" href="index.html" >線上抽籤</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">籤詩解釋</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!-- carousel -->
+  <hr style="border-bottom: 1px solid #404141" >
+
+   </header>
+  <!----輪播圖---------->
+  <!-- 轮播 -->
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" >
+        <img src="./data/carousel2.jpg" class="d-block w-100" alt="..." >
+      </div>
+      <div class="carousel-item" >
+        <img src="./data/carousel3.jpg" class="d-block w-100" alt="..."  >
+      </div>
+      <div class="carousel-item" >
+        <img src="./data/carousel4.jpg" class="d-block w-100" alt="..."  >
+      </div>
+    </div>
+  </div>
+  <!-------------------->
+  <div class="body" id="body" OnLoad="swapPic()"></div>
+
+  <section style="width: 920px; height: 300px; margin-left: 100px; margin-top: 50px; visibility: visible;">
+    <script type="text/javascript">
+      //<!CDATA[
+      var pic = [];
+      pic[0] = "./5b.gif";
+      pic[1] = "./5c.gif";
+      pic[2] = "./6d.gif";
+      pic[3] = "./6c.gif";
+    
+      var randomBgIndex = Math.round( Math.random() * 3 );
+    
+      //输出随机的背景图
+      //document.write('<style>body{background:url(' + bodyBgs[randomBgIndex] + ') no-repeat 50% 0}</style>');
+      document.write("<img src=" + pic[randomBgIndex]+" id='round'" + ">")
+      //]]>
+    </script>    
+    <article>
+      
+      <!-- InstanceBeginEditable name="EditRegion3" -->
+        <h1 class="tittle_one" style="position: relative; left: 10px;">【查看籤詩】</h1>
+        <br>
+        <br>
+        <!--Left -->
+        <div style=" display: inline-block"  >
+        <table width="200" class="article_left" cellpadding="10">
+              <tbody>
+              <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_1.html">第&nbsp;01&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_2.html">第&nbsp;02&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_3.html">第&nbsp;03&nbsp;籤</a>            </td>
+             </tr>
+              <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_4.html">第&nbsp;04&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_5.html">第&nbsp;05&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_6.html">第&nbsp;06&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_7.html">第&nbsp;07&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_8.html">第&nbsp;08&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_9.html">第&nbsp;09&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_10.html">第&nbsp;10&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_11.html">第&nbsp;11&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_12.html">第&nbsp;12&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_13.html">第&nbsp;13&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_14.html">第&nbsp;14&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_15.html">第&nbsp;15&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_16.html">第&nbsp;16&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_17.html">第&nbsp;17&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_18.html">第&nbsp;18&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_19.html">第&nbsp;19&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_20.html">第&nbsp;20&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_21.html">第&nbsp;21&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_22.html">第&nbsp;22&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_23.html">第&nbsp;23&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_24.html">第&nbsp;24&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_25.html">第&nbsp;25&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_26.html">第&nbsp;26&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_27.html">第&nbsp;27&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_28.html">第&nbsp;28&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_29.html">第&nbsp;29&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_30.html">第&nbsp;30&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_31.html">第&nbsp;31&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_32.html">第&nbsp;32&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_33.html">第&nbsp;33&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_34.html">第&nbsp;34&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_35.html">第&nbsp;35&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_36.html">第&nbsp;36&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_37.html">第&nbsp;37&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_38.html">第&nbsp;38&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_39.html">第&nbsp;39&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_40.html">第&nbsp;40&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_41.html">第&nbsp;41&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_42.html">第&nbsp;42&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_43.html">第&nbsp;43&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_44.html">第&nbsp;44&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_45.html">第&nbsp;45&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_46.html">第&nbsp;46&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_47.html">第&nbsp;47&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_48.html">第&nbsp;48&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_49.html">第&nbsp;49&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_50.html">第&nbsp;50&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_51.html">第&nbsp;51&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_52.html">第&nbsp;52&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_53.html">第&nbsp;53&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_54.html">第&nbsp;54&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_55.html">第&nbsp;55&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_56.html">第&nbsp;56&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_57.html">第&nbsp;57&nbsp;籤</a>            </td>
+             </tr>
+                                  <tr>
+                <td>
+                <a class="link_decrtn" href="fortune_58.html">第&nbsp;58&nbsp;籤</a>            </td>
+                <td>
+                <a class="link_decrtn" href="fortune_59.html">第&nbsp;59&nbsp;籤</a>            </td>
+                <td>                        
+                <a class="link_decrtn" href="fortune_60.html">第&nbsp;60&nbsp;籤</a>            </td>
+             </tr>
+                            </tbody>
+        </table>    
+        </div>
+        <!-- End Left -->
+        <div style='width:1px;border:1px solid ;float:right;height:900px; position: relative; right: 550px;'>
+        <!--center -->
+        <table  class="center" id="center">
+          <td> 
+            <p class="vlr" style="margin-top: 10px;">
+              開運方式：
+            <br>
+            點選本校心理系連結，靜心觀看課程架構一遍。
+            </p>
+          </td>
+        </table>
+        <!-- End center -->
+        <!--right -->
+        <div class="article_right" >
+          <span id="anspic"><img src="./data/資產 49.png"></span>
+        </div>
+      <!-- End right -->
+        
+        <!-- InstanceEndEditable -->
+        </article>  
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+
+</html>
