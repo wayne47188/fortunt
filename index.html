@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- common css -->
+  <link rel="stylesheet" href="./css/all.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- project css-->
+  <link rel="stylesheet" href="./css/index.css" />
+  <!---js&jquery-->
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  <script src="./js/all.js"></script>
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+  <title>數位化籤詩系統</title>
+
+ 
+  
+    
+</head>
+
+<body style="background-color: burlywood;">
+   <!---自動輪播-->
+
+   <!------>
+<!-----局部轉跳------>
+  <script>
+      $(function(){	
+      in_link_change_fn();	
+      });
+    $(window).resize(function () {
+      in_link_change_fn();	 
+      }).resize();
+
+      function in_link_change_fn(){
+        $("#in_about_link").removeClass("nav_menu_jq");
+        $("#in_soho_link").addClass("nav_menu_jq");
+        
+        $("#in_soho_link_sel").fadeIn(0);	
+        $("#in_about_link_sel").hide(0);	
+      }
+    </script>
+    <!------------->
+  <header id = naber  >
+  <!----navber -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-yellow ">
+      <div class="container-fluid" style="height: 150;"   >
+        <!-- brand -->
+        <a class="navbar-brand col-5" href="./index.html">
+          <img src="./data/fgu.png" href="./index.html" class="fgu" id="fgu" alt=""></img>
+        </a>
+         <!-- toggler -->
+         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+            <!-- collapse item -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav col-7">
+            <li class="nav-item">
+              <a class="nav-link active  " aria-current="page" href="index.html" >線上抽籤</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">籤詩解釋</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!-- carousel -->
+  <hr style="border-bottom: 1px solid #404141" >
+
+   </header>
+  <!----輪播圖---------->
+  <!-- 轮播 -->
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" >
+        <img src="./data/carousel2.jpg" class="d-block w-100" alt="..." >
+      </div>
+      <div class="carousel-item" >
+        <img src="./data/carousel3.jpg" class="d-block w-100" alt="..."  >
+      </div>
+      <div class="carousel-item" >
+        <img src="./data/carousel4.jpg" class="d-block w-100" alt="..."  >
+      </div>
+    </div>
+  </div>
+  <!-------------------->
+   <div class="body" id="body"></div>
+  <section style="width: 920px; height: 300px; margin-left: 500px; margin-top: 50px; visibility: visible;">
+    <article>
+	<!-- InstanceBeginEditable name="EditRegion3" -->
+    <div style="height:500px; box-sizing: border-box; overflow:hidden;">
+    <!-- 1 -->
+     		<div id="content_0" style="width:830px; height:325px; background-image:url(data/bdr_for_draw.png); background-size:contain; background-repeat:no-repeat;margin-left:auto; margin-right:auto;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='data/bdr_for_draw.png', sizingMethod='scale'); ">            
+            	<div style=" position:relative; top:27px; left:70px;"><img src="data/static_fortune.png" width="160"></div>
+                <div class="content-textB2" style=" position:relative; top:-220px; left:310px;width:450px; height:200px; text-align:justify;">請虔誠地在心中默念您的姓名、出生年月日、住址後，誠心祈求城隍爺，指點迷津，將您心中想請教的事情詳細說明後，再點選"開始求籤"按鈕進行線上求籤。</div>
+                 <div class="btn_class" id="draw" style="cursor:pointer; position:relative; top:-250px; left:470px;" onclick="drawit('0');">開始求籤</div>
+            </div>
+            <!-- /1 -->
+
+            <!-- 2 -->
+            <div id="sharkit" style="width:830px; height:325px; background-image:url(data/bdr_for_draw.png);background-size:contain; background-repeat:no-repeat;margin-left:auto; margin-right:auto; display:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='data/bdr_for_draw.png', sizingMethod='scale');"> 
+            	<div style=" position:relative; top:27px; left:335px;"><img src="data/run_fortune.gif" width="160"></div>                
+            </div>
+            <!-- /2 -->
+
+            <!-- 3 -->
+     		<div id="content_1" style="width:830px; height:325px; background-image:url(data/bdr_for_draw.png); background-size:contain; background-repeat:no-repeat;margin-left:auto; margin-right:auto; display:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='data/bdr_for_draw.png', sizingMethod='scale'); ">
+            	<div id="cyc_draw" style=" position:relative; top:60px; left:60px;"><img src="./data/a_act_draw.gif" width="190"></div>                                
+                <div style=" height:20px;position:relative; top:120px; left:146px;"><span id="luckyid_1" class="tabletitle" style=" display:none;">&nbsp;&nbsp;</span></div>
+                <div class="content-textB3" style=" position:relative;top:-170px; left:480px;width:450px; height:200px;">你抽到 第<span id="luckyid">&nbsp;&nbsp;1&nbsp;&nbsp;</span>籤</div>
+                <div class="content-textB2" style=" position:relative; top:-310px; left:380px;width:450px; height:200px;">請點選"擲筊"按鈕向城隍爺確認賜籤。</div>
+                 <div class="btn_class" id="slot" onclick="slotit();" style="cursor:pointer; position:relative; top:-430px; left:505px;display:none;">擲筊</div>
+            </div>
+            <!-- /3 -->
+
+             <!-- 4 -->
+     		<div id="content_2" style="width:830px; height:325px; background-image:url(data/bdr_for_draw.png); background-size:contain; background-repeat:no-repeat;margin-left:auto; margin-right:auto; display:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='data/bdr_for_draw.png', sizingMethod='scale');">            
+            	<div id="slotresult" style=" position:relative; top:60px; left:60px;"><img src="data/even.png" width="190"></div>
+                <div class="content-textB3" id="result_title" style="position:relative; top:-120px; left:530px;">陰筊</div>
+                <div class="content-textB2" id="result_txt" style=" position:relative;top:-110px; left:450px;width:450px; height:200px;">求籤失敗，請重新求籤。</div>                
+                 <div class="btn_class" id="draw_again" style="cursor:pointer; position:relative; top:-200px; left:490px;" onclick="drawit();">重新求籤</div>
+                   <div class="btn_class" id="gogetit" style="cursor:pointer; position:relative; top:-200px; left:490px; display:none;" onclick="gotit('1');">看籤詩解</div>
+            </div>
+            <!-- /4 -->
+            </div>
+     <script> 
+
+	function drawit(pt){
+		var lucky_num = 1;
+		 lucky_num = Math.floor(Math.random()*60+1); 			 
+		$("#luckyid").text(lucky_num.toString());	
+		$("#luckyid_1").delay(4000).fadeIn(500).text(lucky_num.toString());
+		$("#content_0").css("display","none");	
+		if (pt=='0'){//pull voice
+				$("#sharkit").fadeIn(500).css("display","block");	
+				window.setTimeout("sharkit()", 2100);									
+		}else{
+			sharkit();		
+		}	
+	
+	}
+	function sharkit(){
+			$("#sharkit").css("display","none");	
+			$("#content_1").fadeIn(1000).css("display","block");	
+			$("#cyc_draw img").attr("src", "./data/a_act_draw.gif");			
+			$("#content_2").css("display","none");		
+			$("#draw").css("display","none");	
+			$("#slot").show();				
+			$("#gogetit").css("display","none");									
+	}
+	function gotit(){
+		location.href="./fortune_"+$("#luckyid").html()+'.html';
+	}
+	function slotit(){			
+		var slot_num = 1;
+				$("#content_2").fadeIn(800).css("display","block");	
+				$("#content_1").css("display","none");					
+		 slot_num = Math.floor(Math.random()*4); 	
+		 if (slot_num==0){
+			 jQuery("#slotresult").attr("src", "data/no.png")
+			 $("#draw_again").show();		 
+			 $("#slot").css("display","none");		 
+			 $("#gogetit").css("display","none");				 
+			 $("#result_title").text("陰筊");		
+			 $("#result_txt").text("求籤失敗，請重新求籤");		
+			 
+		 }else if(slot_num>2){
+			 jQuery("#slotresult").attr("src", "data/even.png")		
+			 $("#draw_again").show();		 
+			 $("#slot").css("display","none");		 
+			 $("#gogetit").css("display","none");			 
+			 $("#result_title").text("笑筊");		
+			 $("#result_txt").text("求籤失敗，請重新求籤");		
+			 
+		 }else{
+			 jQuery("#slotresult").attr("src", "data/yes.png")
+			 $("#result_title").text("聖筊");		
+			 $("#result_txt").text("求籤成功，請領取籤詩");		
+			 $("#draw_again").css("display","none");		 
+			 $("#slot").css("display","none");		 
+			 $("#gogetit").show();		 			 			 
+		 }					
+	}
+	
+	
+	
+	//$("#sharkit").css("disp")
+		
+    </script>     <!-- InstanceEndEditable -->
+    </article>   
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+
+</html>
